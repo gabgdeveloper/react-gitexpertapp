@@ -14,10 +14,11 @@ export const AddCategory = ( { setCategories }  ) => {
 
         if ( inputValue.trim().length > 0 ) {
             //setCategories( cats => [ inputValue,...cats] ); // order invertido, recibe un callback,™¡
-            setCategories( categories => [ ...categories, inputValue ] ); // order correcto
+            setCategories( categories => [ inputValue, ...categories  ] ); // order correcto
             setInputValue('');
         }
     }
+
     return (
             <form onSubmit={handleSubmit}>
                 <input
